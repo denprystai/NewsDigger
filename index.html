@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Digger</title>
+    <!-- Підключення бібліотеки Telegram -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <h1>Welcome to News Digger</h1>
+    <button onclick="sendDataToTelegram()">Send Data to Telegram</button>
+
+    <script>
+        // Функція для взаємодії з Telegram
+        function sendDataToTelegram() {
+            const tg = window.Telegram.WebApp;
+            tg.sendData("Hello from Mini App!"); // Приклад відправки даних в Telegram
+        }
+
+        // Ініціалізація додатку
+        window.onload = function() {
+            const tg = window.Telegram.WebApp;
+            tg.expand(); // Розширює додаток на весь екран
+        };
+    </script>
+</body>
+</html>
